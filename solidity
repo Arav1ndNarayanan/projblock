@@ -1,0 +1,125 @@
+
+//sol1
+
+pragma solidity 0.4.26;
+
+contract reg_transact{
+    struct reg_name
+    {
+    string fname;
+    string lname;
+    string rno;
+    string model;
+    string cn;
+    string add;
+    string pincode;
+    }
+    reg_name regName;
+    constructor() public{
+        regName.fname = "";
+        regName.lname ="";
+        regName.rno ="";
+        regName.model ="";
+        regName.cn ="";
+        regName.add ="";
+        regName.pincode ="";
+    
+    }
+    function reg_setname(string memory fn,string memory lame,string memory rn,string memory mod,string memory chno,string memory adds,string memory pin) public {
+        regName.fname = fn;
+        regName.lname = lame;
+        regName.rno =rn;
+        regName.model =mod;
+        regName.cn =chno;
+        regName.add =adds;
+        regName.pincode =pin;
+    }
+    function reg_getname() public view returns(string memory,string memory,string memory,string memory,string memory,string memory,string memory){
+        return(regName.fname,regName.lname,regName.rno,regName.model,regName.cn,regName.add,regName.pincode);
+    }
+    
+}
+
+
+//sol2
+
+
+pragma solidity 0.4.26;
+
+contract pol_transact{
+    struct pol_name
+    {
+    string fname;
+    string lname;
+    string rno;
+    string model;
+    string cn;
+    string doi;
+    string doe;
+    }
+    pol_name polName;
+    constructor() public{
+        polName.fname = "";
+        polName.lname ="";
+        polName.rno ="";
+        polName.model ="";
+        polName.cn ="";
+        polName.doi="";
+        polName.doe ="";
+    
+    }
+    function pol_setname(string memory fn,string memory lame,string memory rn,string memory mod,string memory chno,string memory doi,string memory doe) public {
+        polName.fname = fn;
+        polName.lname = lame;
+        polName.rno =rn;
+        polName.model =mod;
+        polName.cn =chno;
+        polName.doi =doi;
+        polName.doe =doe;
+    }
+    function pol_getname() public view returns(string memory,string memory,string memory,string memory,string memory,string memory,string memory){
+        return(polName.fname,polName.lname,polName.rno,polName.model,polName.cn,polName.doi,polName.doe);
+    }
+    
+}
+
+//sol3
+
+pragma solidity 0.4.26;
+
+contract insu_transact{
+    struct insu_name
+    {
+    string fname;
+    string lname;
+    string rno;
+    string model;
+    string cn;
+    string doi;
+    string doe;
+    }
+    insu_name insuName;
+    constructor() public{
+        insuName.fname = "";
+        insuName.lname ="";
+        insuName.rno ="";
+        insuName.model ="";
+        insuName.cn ="";
+        insuName.doi="";
+        insuName.doe ="";
+    
+    }
+    function insu_setname(string memory fn,string memory lame,string memory rn,string memory mod,string memory chno,string memory doi,string memory doe) public {
+        insuName.fname = fn;
+        insuName.lname = lame;
+        insuName.rno =rn;
+        insuName.model =mod;
+        insuName.cn =chno;
+        insuName.doi =doi;
+        insuName.doe =doe;
+    }
+    function insu_getname() public view returns(string memory,string memory,string memory,string memory,string memory,string memory,string memory){
+        return(insuName.fname,insuName.lname,insuName.rno,insuName.model,insuName.cn,insuName.doi,insuName.doe);
+    }
+    
+}
