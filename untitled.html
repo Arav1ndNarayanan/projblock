@@ -1,0 +1,309 @@
+<head>
+	 <meta charset="utf-8">
+  <title>DocBlock</title>
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Font-->
+  <link rel="stylesheet" type="text/css" href="css/montserrat-font.css">
+  <link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+  <!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="web3.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-migrate-1.4.1.min.js"></script>
+</head>
+
+<body class="form-v10">
+  <div class="page-content">
+    <div class="form-v10-content">
+      <form class="form-detail" action="#" method="post" id="myform">
+        <div class="form-left">
+          <h2>DocBlock</h2>
+          <div class="form-row">
+            <select name="title" id="typ">
+                <option class="option" value="title">Vehicle Type</option>
+                <option class="option" value="Two wheele">Two wheeler</option>
+                <option class="option" value="Four wheeler">Four wheeler</option>
+                <option class="option" value="Heavy Vehcle">Heavy Vehcle</option>
+            </select>
+            <span class="select-btn">
+                <i class="zmdi zmdi-chevron-down"></i>
+            </span>
+          </div>
+          <div class="form-group">
+            <div class="form-row form-row-1">
+              <input type="text" name="first_name" id="fnam" class="input-text" placeholder="Owners First Name" >
+            </div>
+            <div class="form-row form-row-2">
+              <input type="text" name="last_name" id="lnam" class="input-text" placeholder="Owners Last Name" >
+            </div>
+          </div>
+          <div class="form-row">
+              <input type="text" name="regno" id="rn" class="input-text" placeholder="Registration Number" >
+          </div>
+          <div class="form-row">
+            <select name="company" id="cmp">
+                <option value="company">company</option>
+                <option value="Honda">Honda</option>
+                <option value="TVS">TVS</option>
+                <option value="HERO">HERO</option>
+            </select>
+            <span class="select-btn">
+                <i class="zmdi zmdi-chevron-down"></i>
+            </span>
+          </div>
+              <div class="form-row">
+            <select name="model" id="model">
+                <option value="model name">model name</option>
+                <option value="Shine">Shine</option>
+                <option value="Livo">Livo</option>
+                <option value="Unicorn">Unicorn</option>
+            </select>
+            <span class="select-btn">
+                <i class="zmdi zmdi-chevron-down"></i>
+            </span>
+          </div>
+         <div class="form-row">
+            <input type="text" name="Registration Date" class="company" id="rd" placeholder="Registration Date" >
+          </div>
+          <div class="form-group">
+            <div class="form-row form-row-3">
+              <input type="text" name="chase nmber" class="business" id="cn" placeholder="chase number" >
+            </div>
+            <div class="form-row form-row-4">
+              <select name="employees"  id="owner">
+                  <option value="ownership">ownership</option>
+                  <option value="first party">first party</option>
+                  <option value="second party">second party</option>
+                  <option value="third party">third party</option>
+              </select>
+              <span class="select-btn">
+                  <i class="zmdi zmdi-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-right">
+          <h2>Contact Details</h2>
+          <div class="form-row">
+            <input type="text" name="street" class="street" id="add" placeholder="Address" >
+          </div>
+          <div class="form-row">
+            <input type="text" name="additional" class="additional" id="additional" placeholder="Additional Information" >
+          </div>
+          <div class="form-group">
+            <div class="form-row form-row-1">
+              <input type="text" name="pin" class="pin" id="pin" placeholder="pin Code" >
+            </div>
+            <div class="form-row form-row-2">
+              <select name="place" id="place">
+                  <option value="place">Place</option>
+                  <option value="Street">Street</option>
+                  <option value="District">District</option>
+                  <option value="City">City</option>
+              </select>
+              <span class="select-btn">
+                  <i class="zmdi zmdi-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+          <div class="form-row">
+            <select name="country" id="con">
+                <option value="country">Country</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="India">India</option>
+            </select>
+            <span class="select-btn">
+                <i class="zmdi zmdi-chevron-down"></i>
+            </span>
+          </div>
+          <div class="form-group">
+            <div class="form-row form-row-1">
+              <input type="text" name="code" class="code" id="code" placeholder="Code +" >
+            </div>
+            <div class="form-row form-row-2">
+              <input type="text" name="phone" class="phone" id="ph" placeholder="Phone Number" >
+            </div>
+          </div>
+          <div class="form-row">
+            <input type="text" name="your_email" id="email" class="input-text"  pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+          </div> 
+         
+          <div class="form-row-last">
+            <input type="button" id="do" name="register"  class="register" value="Register ">
+             <input type="button" id="show" name="view"  class="register" value="view " style="display:none;">
+
+          </div> 
+        </div>
+      </form>
+    </div>
+  </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+  <!--
+        First name: <input type="text" name="fname" id="fnam"><br>
+        Last name: <input type="text" name="lname" id="lnam"><br>
+        <input type="button" value="Submit" id = "do">
+        <input type="button" value= "Show" id = "show">
+   
+      
+</body>
+-->
+<script>
+ var contract
+ var accounts
+ var hsh
+ var acc1
+ var abi
+$(document).ready(function(){
+
+const provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545')  
+const web3 = new Web3(provider); 
+ var acc1 
+  abi = [
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "reg_getname",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "fn",
+        "type": "string"
+      },
+      {
+        "name": "lame",
+        "type": "string"
+      },
+      {
+        "name": "rn",
+        "type": "string"
+      },
+      {
+        "name": "mod",
+        "type": "string"
+      },
+      {
+        "name": "chno",
+        "type": "string"
+      },
+      {
+        "name": "adds",
+        "type": "string"
+      },
+      {
+        "name": "pin",
+        "type": "string"
+      }
+    ],
+    "name": "reg_setname",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  }
+]
+ 
+    var address = "0x65c85525d1e1A359077FC5e6BdE0E85B8C03CCf6"
+    contract = new web3.eth.Contract(abi,address)
+    console.log(contract)
+
+    accounts = web3.eth.getAccounts().then((res)=>{return res[2]})
+    console.log(accounts)
+    //var acc = Promise.resolve(accounts)
+    acc1 =   accounts.then((res,err)=>{
+     alert(res)
+     hsh=res
+    // document.getElementById('show').style.visibility = 'hidden';
+     document.getElementById("show").value = hsh;
+
+    })
+     /*contract.methods.getname().call().then(function(res){
+        $('#fnam').html(res)
+    })
+*/
+})
+
+
+
+$('#do').click(function(){
+
+  //const acc = "0x9D65BE58501EE800F8074d6d06C8105c065d4614"
+var x = document.getElementById("show").value;
+alert("success:"+x)
+
+
+
+		const ln = $('#lnam').val()
+		const fn = $('#fnam').val()
+   
+    const regn = $('#rn').val()
+
+    const model = $('#model').val()
+    
+    const chase = $('#cn').val()
+    
+    const adress = $('#add').val()
+  
+    const pin = $('#pin').val()
+    const hash = contract.methods.reg_setname(fn,ln,regn,model,chase,adress,pin).send({from:x,gas:3000000}).on("transactionHash", function(tHash){
+       document.getElementById("show").value = tHash
+       //return(tHash)
+       var y=document.getElementById("show").value;
+       alert(y)
+       var queryString = "?para1=" + y + "&para2=" + y;
+        window.location.href = "qr.html" + queryString;
+    })
+    //console.log("hash :"+)
+    
+
+})
+</script>
+</html>

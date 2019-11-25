@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <script src="web3.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-migrate-1.4.1.min.js"></script>
+</head>
+<body>
+    <div>
+    <form>
+        First name: <input type="text" name="fname" id="fnam"><br>
+        Last name: <input type="text" name="lname" id="lnam"><br>
+        <input type="button" value="Submit" id = "do">
+        <input type="button" value= "Show" id = "show">
+      </form>
+      </div>
+      
+</body>
+
+<script>
+
+var contract
+$(document).ready(()=>{
+
+const provider = new Web3.providers.HttpProvider(
+'http://127.0.0.1:8545',
+);	
+const web3 = new Web3(provider);
+  // var web3 = new Web3(web3.currentProvider)
+    var abi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "fn",
+				"type": "string"
+			},
+			{
+				"name": "lame",
+				"type": "string"
+			}
+		],
+		"name": "setname",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getname",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+]
+	
+    var address = "e6B96F2A21Ee0F29bd83412B1A38246eb333F2f1"
+    contract = new web3.eth.Contract(abi,address)
+})
+$('#do').click(function(){
+       var acc = "02EB4F057e2d526FD7c9fe29D08eF6ac0BEa00D4"
+		const ln = $('#lnam').val()
+		const fn = $('#fnam').val()
+		console.log(contract)
+        contract.methods.setname(fn,ln).send({from:acc}).then((res,err)=>{
+        	console.log(res)
+        }
+})
+$('#show').click(()=>{
+	var acc = "02EB4F057e2d526FD7c9fe29D08eF6ac0BEa00D4"
+     const hash =  contract.methods.getname().call().then(function(result,err){
+        //$('#fnam').html(name)
+        if(!err){
+        	console.log(result[1])
+    }
+    else
+    	console.log(err);
+    }).on("transactionHash",function(tHash){
+    	return(tHash)
+    })
+    alert(hash)
+});     
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    
+    <script src="web3.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-migrate-1.4.1.min.js"></script>
+    <script src="https://www.jsdelivr.com/package/npm/abi-decoder/dist/abi-decoder.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo center">QR_CODE </a>
+                  <ul id="nav-mobile" class="left hide-on-med-and-down">
+                
+                  </ul>
+                </div>
+              </nav>
+                    
+      <div class="jumbotron">
+  
+          <p class="lead center">
+                
+                      <!--  <input type="text" placeholder="write the content" id="url" class="validate center" style="width:30%" ><br> -->
+               
+              <a class="btn btn-success center" role="button" id="btn">Generate</a>
+          
+              <div id="hasil" style="margin:auto; width: 45%">
+                    
+                </div>
+            </p>
+      </div>
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+ 
+
+<script>
+
+  var transaction
+    $().ready(function(){
+        $( "#btn" ).click(function() {
+var loc= window.location.href;
+var n = loc.lastIndexOf("=");
+var locx=loc.substring(n+1)
+
+
+ // var address = "0x65c85525d1e1A359077FC5e6BdE0E85B8C03CCf6"
+   // contract = new web3.eth.Contract(abi,address)
+   // console.log(contract)
+//abiDecoder.addABI(abi);
+//const decodedData = abiDecoder.decodeMethod(locx)
+//console.log(decodedData)
+//alert(locx)
+/* -- worKing
+acc = "02EB4F057e2d526FD7c9fe29D08eF6ac0BEa00D4"
+const hash = contract.methods.reg_getname().call({from:acc,gas:3000000}).then((res,err)=>{
+  console.log(res)
+}).catch((tx)=>console.log(tx))---*/
+
+      //var y=document.getElementById("show").value;
+       //alert(y)
+    
+           var url =$('#url').val();
+           $('#hasil').html('<img src="https://qr.johneletto.com/'+locx+'" class="materialboxed" width="400"   />')
+            
+});
+ 
+   
+    })
+</script>
